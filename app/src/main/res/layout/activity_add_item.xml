@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- TextInputLayout for Item Name -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/item_name_editItem"
+        app:layout_constraintWidth_max="488dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for Price Per Unit -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPricePerUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/price_per_unit_editItem"
+        app:layout_constraintWidth_max="488dp"
+        app:layout_constraintTop_toBottomOf="@id/tilItemName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPricePerUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout for Unit (Count/Weight) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUnitValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/unit_count_weight_editItem"
+        app:layout_constraintWidth_max="488dp"
+        app:layout_constraintTop_toBottomOf="@id/tilPricePerUnit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUnitValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSaveItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_to_list"
+        app:layout_constraintTop_toBottomOf="@id/tilUnitValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
