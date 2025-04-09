@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Shopping App</string>
+    <string name="sales_tax_setting">Sales Tax Setting</string>
+    <string name="start_new_list">Shopping Adventure</string>
+    <string name="enter_sales_tax_e_g_7_00">Enter Sales Tax (e.g., 7.00)</string>
+    <string name="save_sales_tax">Save Sales Tax</string>
+    <string name="item_name">Item Name</string>
+    <string name="price_per_unit">Price per Unit</string>
+    <string name="unit_count_weight">Unit (Count/Weight)</string>
+    <string name="save_to_list">Save to List</string>
+    <string name="item_name_editItem">Item Name</string>
+    <string name="price_per_unit_editItem">Price per Unit</string>
+    <string name="unit_count_weight_editItem">Unit (Count/Weight)</string>
+    <string name="save_editItem">Save</string>
+    <string name="delete_editItem">Delete</string>
+    <string name="total_0_00">Total: $0.00</string>
+    <string name="add_item">Add Item</string>
+    <string name="clear_list">Clear List</string>
+    <string name="item_name_itemShopping">Item Name</string>
+    <string name="_0_00">$0.00</string>
+    <string name="price_per_unit_0_00_unit_0">Price per unit: $0.00, Unit: 0</string>
+    <string name="my_items">My Items</string>
+    <string name="add_item_myItems">Add Item</string>
+    <string name="clear_list_myItems">Clear List</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="item_name_dialogAddItem">Item Name</string>
+    <string name="edit_item_name">Edit Item Name</string>
+    <string name="save_dialogEditItem">Save</string>
+    <string name="delete">Delete</string>
+    <string name="add_items_from_my_list">Add from My Items</string>
+    <string name="add_items">Add Items</string>
+    <string name="item_name_item_my_item_selectable">Item Name</string>
+    <string name="add_items_addFromMyItems">Add Items</string>
+    <string name="select_all">Select All</string>
+    <string name="unselect_all">Unselect All</string>
+</resources>
