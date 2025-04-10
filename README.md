@@ -2,18 +2,15 @@
 
 ## About This Project
 
-This Android shopping calculator app was developed as my senior project for the Computer Science program at BYU–Idaho. It's designed to help users track and manage grocery expenses with ease, supporting price entry, persistent sales tax, and a reusable item list. The project is being developed in two phases:
+This Android shopping calculator app was developed as my senior project for the Computer Science program at BYU–Idaho. It's designed to help users track and manage grocery expenses with ease, supporting price entry, persistent sales tax, and a reusable item list.
 
-- **Regular Joe**: A simple, user-friendly version built for anyone who wants to manage their shopping totals with customizable features like multi-trip support and checkable items.
-- **Regular Joe+**: A future expansion designed for users who receive EBT or WIC assistance, with additional budgeting logic, item categorization, and program-specific behavior.
-
-The current version (Regular Joe) is actively in development and will serve as the clean foundation for the upcoming Regular Joe+ version.
+The current version is actively in development and focuses on providing a clean, simple foundation for tracking shopping expenses. A future version is planned to support advanced budgeting features for users receiving EBT or WIC assistance.
 
 ---
 
 ## Features
 
-### ✅ Current Features (Regular Joe)
+### ✅ Current Features
 - Add and edit shopping list items with name, quantity/weight, and price
 - Automatically calculates and updates a running total including sales tax
 - Persistent storage of sales tax percentage—set once, used for every trip
@@ -23,7 +20,7 @@ The current version (Regular Joe) is actively in development and will serve as t
 
 ---
 
-### 🚧 Planned Features (Regular Joe)
+### 🚧 Planned Features
 - Support for managing **multiple shopping trips** using `shoppingTripID`
 - Ability to rename, delete, and switch between saved shopping trips
 - Allow users to **check off purchased items**, automatically:
@@ -32,16 +29,16 @@ The current version (Regular Joe) is actively in development and will serve as t
 
 ---
 
-### 🌟 Future Expansion: Regular Joe+
+### 🌟 Future Expansion: EBT/WIC Support
 
-This version will be built on top of the Regular Joe foundation and will focus on enhanced budgeting functionality for users who receive government assistance:
+A future version of this app is planned to provide enhanced budgeting functionality for users who receive government assistance:
 
 - Mark items as **EBT** (exempt from tax) or **WIC** (free or produce-limited)
 - Budget rules applied per item type (e.g., no tax for EBT, limits for WIC produce)
 - Display **total costs for EBT, WIC, and out-of-pocket items** at the top of the screen
 - Modified data models and logic to reflect real-world budgeting scenarios
 
-This version will be developed as a **separate app**, cloned from the finalized Regular Joe codebase to ensure a clean and focused experience.
+This version will be developed as a **separate app**, cloned from the finalized shopping app codebase to ensure a clean and focused experience.
 
 ---
 
