@@ -21,7 +21,7 @@ public interface ShoppingItemDao {
     @Delete
     void delete(ShoppingItem item);
 
-    @Query("SELECT * FROM shopping_item")
+    @Query("SELECT * FROM shopping_item ORDER BY inCart ASC, normalizedName ASC")
     LiveData<List<ShoppingItem>> getAllItems();
 
     // New method to get a single item by its id

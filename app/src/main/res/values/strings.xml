@@ -34,4 +34,6 @@
     <string name="add_items_addFromMyItems">Add Items</string>
     <string name="select_all">Select All</string>
     <string name="unselect_all">Unselect All</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="add_to_cart_activityEditItem">Add to Cart</string>
 </resources>

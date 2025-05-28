@@ -3,6 +3,7 @@ package com.example.shoppingapp;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
+import android.widget.CheckBox;  // Newly added import
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import com.example.shoppingapp.utils.StringUtils;
 public class AddItemActivity extends AppCompatActivity {
 
     private EditText etItemName, etPricePerUnit, etUnitValue;
+    private CheckBox cbAddToCart;  // New field for the "Add to Cart" checkbox
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class AddItemActivity extends AppCompatActivity {
         etItemName = findViewById(R.id.etItemName);
         etPricePerUnit = findViewById(R.id.etPricePerUnit);
         etUnitValue = findViewById(R.id.etUnitValue);
+        cbAddToCart = findViewById(R.id.cbAddToCart);  // Initialize the checkbox
+
         Button btnSaveItem = findViewById(R.id.btnSaveItem);
 
         btnSaveItem.setOnClickListener(view -> {
@@ -47,8 +51,10 @@ public class AddItemActivity extends AppCompatActivity {
                 ShoppingItem duplicate = ShoppingDatabaseInstance.getInstance(getApplicationContext())
                         .shoppingItemDao().getItemByNormalizedName(normalized);
                 if (duplicate == null) {
-                    // No duplicate exists; insert the new item.
-                    ShoppingItem newItem = new ShoppingItem(itemName, pricePerUnit, unitValue,  normalized);
+                    ShoppingItem newItem = new ShoppingItem(itemName, pricePerUnit, unitValue, normalized);
+                    // Set the inCart flag based on the checkbox's state (default is unchecked).
+                    newItem.setInCart(cbAddToCart.isChecked());
+
                     ShoppingDatabaseInstance.getInstance(getApplicationContext())
                             .shoppingItemDao().insert(newItem);
                     runOnUiThread(() ->

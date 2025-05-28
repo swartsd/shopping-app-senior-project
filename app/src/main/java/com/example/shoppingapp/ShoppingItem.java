@@ -13,6 +13,7 @@ public class ShoppingItem {
     private float pricePerUnit;
     private float unit;
     private String normalizedName;
+    private boolean inCart;
 
     // Constructor
     public ShoppingItem(String itemName, float pricePerUnit, float unit, String normalizedName) {
@@ -20,6 +21,7 @@ public class ShoppingItem {
         this.pricePerUnit = pricePerUnit;
         this.unit = unit;
         this.normalizedName = normalizedName;
+        this.inCart = false;
     }
 
     // Getters and setters
@@ -58,4 +60,9 @@ public class ShoppingItem {
     public String getNormalizedName() { return normalizedName; }
 
     public void setNormalizedName(String normalizedName) { this.normalizedName = normalizedName; }
+
+    // New getter and setter for inCart.
+    public boolean isInCart() { return inCart; }
+
+    public void setInCart(boolean inCart) { this.inCart = inCart; }
 }

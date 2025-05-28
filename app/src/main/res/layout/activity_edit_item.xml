@@ -66,6 +66,16 @@
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Add the "Add to Cart" CheckBox -->
+    <CheckBox
+        android:id="@+id/cbAddToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_cart_activityEditItem"
+        app:layout_constraintTop_toBottomOf="@id/tilUnitValue"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
     <!-- Save Button -->
     <Button
         android:id="@+id/btnSaveItem"

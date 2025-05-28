@@ -3,6 +3,7 @@ package com.example.shoppingapp;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
+import android.widget.CheckBox; // Import CheckBox
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
@@ -14,6 +15,7 @@ import com.example.shoppingapp.utils.StringUtils;
 public class EditItemActivity extends AppCompatActivity {
 
     private EditText etItemName, etPricePerUnit, etUnitValue;
+    private CheckBox cbAddToCart; // Declare the new CheckBox
     private int itemId;
     private ShoppingItem currentItem;
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -26,6 +28,7 @@ public class EditItemActivity extends AppCompatActivity {
         etItemName = findViewById(R.id.etItemName);
         etPricePerUnit = findViewById(R.id.etPricePerUnit);
         etUnitValue = findViewById(R.id.etUnitValue);
+        cbAddToCart = findViewById(R.id.cbAddToCart); // Initialize the CheckBox
         Button btnSaveItem = findViewById(R.id.btnSaveItem);
         Button btnDeleteItem = findViewById(R.id.btnDeleteItem);
 
@@ -46,6 +49,8 @@ public class EditItemActivity extends AppCompatActivity {
                     etItemName.setText(currentItem.getItemName());
                     etPricePerUnit.setText(String.valueOf(currentItem.getPricePerUnit()));
                     etUnitValue.setText(String.valueOf(currentItem.getUnit()));
+                    // Set the CheckBox state based on the item's inCart flag.
+                    cbAddToCart.setChecked(currentItem.isInCart());
                 });
             } else {
                 runOnUiThread(() -> {
@@ -84,6 +89,8 @@ public class EditItemActivity extends AppCompatActivity {
                     currentItem.setPricePerUnit(price);
                     currentItem.setUnit(unit);
                     currentItem.setNormalizedName(normalized);
+                    // Update the inCart flag from the state of the CheckBox.
+                    currentItem.setInCart(cbAddToCart.isChecked());
                     ShoppingDatabaseInstance.getInstance(getApplicationContext())
                             .shoppingItemDao().update(currentItem);
                     runOnUiThread(() -> {
